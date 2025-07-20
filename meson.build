@@ -1,6 +1,6 @@
 project('dlg', ['c', 'cpp'],
 	version: '0.2.2',
-	meson_version: '>=0.46.0',
+	meson_version: '>=0.58.0',
 	default_options: [
 		'c_std=c11',
 		'cpp_std=c++11',
@@ -19,7 +19,7 @@ sources = []
 libs = []
 
 # base path, correctly escaped on windows
-base_path = join_paths([meson.source_root(), ''])
+base_path = join_paths([meson.global_source_root(), ''])
 add_project_arguments('-DDLG_BASE_PATH="' + base_path + '"', language: ['c', 'cpp'])
 message('DLG_BASE_PATH: ' + base_path)
 
